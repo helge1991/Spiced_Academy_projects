@@ -1,6 +1,6 @@
-# Recommender system for movies
+# Recommender Systems
 
-Results: I've built a web application on Streamlit & Flask that suggests different movie recommendations based on users input.
+Results of the project: I've built a web application on Streamlit & Flask that suggests different movie recommendations based on users input.
 
 Tools used:
 - Streamlit
