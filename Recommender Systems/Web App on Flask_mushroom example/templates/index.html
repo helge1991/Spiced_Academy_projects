@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="static/style.css">
+
+</head>
+<body>
+    <h1>Welcome to {{name}} page</h1>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN8bxwaCvb8pvOdNHdM0VB7MLJ9vQPaOYLQA&usqp=CAU" width="200" height="200" >
+    <br>
+    
+    <form action="/movies">
+    <select name="option">
+        <option name="Random">Random</option>
+        <option name="NMF">NMF</option>
+        <option name="Cosine Similarity">Cosine Similarity</option>
+    </select>
+    <br></br>
+    {%for box in range(3)%}
+    <input name="title" type="text" placeholder="Enter movies" list="movies_list">
+    <input name="rating" type="number" placeholder="1-5" min="1" max="5" step="0.1">
+    <br></br>
+    {% endfor %}
+    <input type="submit" value="Show Recommendations">
+    </form>
+    <!-- <a href="/movies">Go to next page</a> -->
+
+    <datalist id="movies_list">
+        {%for movie in movies%}
+        <option>{{movie}}</option>
+        {%endfor%}
+    </datalist>
+
+</body>
+</html>
